@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <h1>My Contact Details</h1>
+    <p>
+        <strong>Phone Number: </strong> 7065272402
+    </p>
+    <p>
+        <strong>Email id: </strong> akashat2003@gmail.com
+    </p>
+    <p>
+        <strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/akshatvashisht/" target="_blank">Akshat's
+            LinkedIn</a>
+    </p>
+    <hr>
+    <!-- Form is created using form element -->
+    <form action="mailto:akashat2003@gmail.com" method="post" enctype="text/plain" target="_blank">
+        <!-- Label defines the label for that particular input field -->
+        <!-- For attribute is similar to id of input field -->
+        <label for="Name">Name:</label>
+        <!-- Input fields to actually input the data -->
+        <!-- Attribute type: 
+        Button: A push button with no default behavior displaying the value of the value attribute, empty by default.
+        Checkbox: A check box allowing single values to be selected/deselected.
+        Color: A control for specifying a color; opening a color picker when active in supporting browsers.
+        Date: A control for entering a date (year, month, and day, with no time). Opens a date picker
+        Email: A field for editing an email address. Looks like a text input, but has validation parameters
+        File: A control that allows file upload. Use the accept attribute to define the types of files that the control can select.
+        Password: A single-line text field whose value is obscured. Will alert user if site is not secure.	    
+        Range: A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle.
+        Submit: A button that submits the form.
+        Text: The default value. A single-line text field. Line-breaks are automatically removed from the input value.
+
+        Attribute value:
+        The value to be inserted for that input field initially 
+        -->
+        <input type="text" name="name">
+        <br>
+        <label for="Email">Email:</label>
+        <input type="email" name="email">
+        <br>
+        <br>
+        <label for="Text">Text:</label>
+        <textarea name="text" cols="30" rows="10"></textarea>
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
