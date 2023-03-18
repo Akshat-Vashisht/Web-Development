@@ -1,5 +1,32 @@
+/* 
+
+Display
+
+Inline: Placed in the same line, width height automatic acc to content, can not be changed
+Inline-block: Placed in the same line, width height can be changed
+Block: Placed in different lines (line break after content), width height can be changed
+None: Removes the display completely
+
+Note:- Visibility:hidden can also be done to hide the display but it keeps the space, display:none will remove the space
+
+Position: 
+
+Static: This is how the html code will render and position it, (default value)
+Relative: First position based on static will be seen, then the element will offset itself relative to the direction we specify
+So, position: relative; left:20px will push the img away from the static position's left edge by 20 px. Note:- The other elements wont be affected i.e. the natural flow of the html doc will not change
+Absolute: The postiion is changed with respect to the parent, so if inside body it will offset with respect to body, so absolute left 20 would mean that the element will move away from the left edge of the parent by 20 px. Note:- The other elements position IS AFFECTED i.e. this does disrupt the natural flow of the html doc. To make another element say div a parent we need to enclose the child inside that div then we need to go to css and target that div and make it position as relative; with no value specifcation.
+Fixed: It means that the element will be fixed to one place/position even though we scroll through the website (for things like navbars, sidebars, etc.)
+
+*/
+
+
 .top-container {
     background-color: #E3FDFD;
+}
+
+img {
+    background-color: #E3FDFD;
+
 }
 
 body {
@@ -20,4 +47,8 @@ h1 {
     background-color: blue;
     width: 200px;
     height: 200px;
+}
+
+.full-stack {
+    text-decoration: underline;
 }
