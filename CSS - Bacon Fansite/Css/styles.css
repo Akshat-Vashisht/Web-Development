@@ -1,0 +1,30 @@
+/* Tag selector with just name */
+h1 {
+    color: #FF00FF;
+    font-size: 80px;
+}
+
+/* We can also have pseudo classes with ':'.
+This allows us to affect the state after a particular event, say hover on that element occurs */
+
+img:hover {
+    background-color: purple;
+}
+
+/* Class selector with . */
+.bacon {
+    background-color: green;
+}
+
+.eggplant {
+    background-color: red;
+}
+
+.circle {
+    border-radius: 100%;
+}
+
+/* Id selector with # */
+#heading {
+    color: chartreuse;
+}
