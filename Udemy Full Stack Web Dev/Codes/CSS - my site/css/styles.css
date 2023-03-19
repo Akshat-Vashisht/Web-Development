@@ -47,7 +47,7 @@ body {
 }
 
 h1 {
-    color: #66BFBF;
+    color: #40bebe;
     font-family: 'Sacramento', cursive;
     font-size: 5.625em;
     margin: 50px auto 0 auto;
@@ -57,7 +57,7 @@ h2 {
     color: #66BFBF;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 h3 {
@@ -72,46 +72,34 @@ a {
 }
 
 hr {
-    border: dotted 6px #EAF6F6;
+    border: dotted 6px #a6fbfb;
     border-top: none;
-    width: 4%;
+    width: 8%;
     margin: 100px auto;
 }
 
 .top-container {
-    background-color: #E3FDFD;
-    padding-top: 100px;
+    padding-top: 180px;
+    padding-bottom: 300px;
     position: relative;
+    background-image: url(https://images.unsplash.com/photo-1483354483454-4cd359948304?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: round;
+
 }
 
-.middle-container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+.web-developer {
+
+    color: #11999E;
+    margin: 0px;
 }
+
+
 
 .bottom-container {
     background-color: #66BFBF;
     height: 150px;
     padding-top: 100px;
 }
-
-.bottom-cloud {
-    bottom: 300px;
-    left: 200px;
-    position: absolute;
-}
-
-.top-cloud {
-    position: absolute;
-    right: 250px;
-    top: 40px;
-}
-
-.web-developer {
-    text-decoration: underline;
-}
-
-
 
 .skill-row {
     margin: 100px auto;
@@ -134,7 +122,10 @@ hr {
 }
 
 .akshat-pfp {
-    width: 30%;
+    width: 20%;
+    float: left;
+    margin-left: 250px;
+    margin-right: 0px;
 }
 
 .profile {
@@ -147,7 +138,7 @@ hr {
 }
 
 .contact-me {
-    margin: 100px auto;
+    margin: 100px auto 0;
 }
 
 .btn {
