@@ -17,38 +17,175 @@ So, position: relative; left:20px will push the img away from the static positio
 Absolute: The postiion is changed with respect to the parent, so if inside body it will offset with respect to body, so absolute left 20 would mean that the element will move away from the left edge of the parent by 20 px. Note:- The other elements position IS AFFECTED i.e. this does disrupt the natural flow of the html doc. To make another element say div a parent we need to enclose the child inside that div then we need to go to css and target that div and make it position as relative; with no value specifcation.
 Fixed: It means that the element will be fixed to one place/position even though we scroll through the website (for things like navbars, sidebars, etc.)
 
+
+Font:size 
+
+px- Fixed size, doesn't change if the user has his font size as large or small in his browser preferences
+
+%- Dynamic 100% = 16px
+em- Dynamic 1em = 16 px
+However these properties are dependent on their parent as well, so if parent has size 2em this will add 1 em on top of that
+
+rem- Same as em but it is not dependent on parent, so recommended 
+
+
+Clear and float
+
+Float: left/right/top/bottom makes the element stick to that side and the other element to wrap around it
+Clear: It is like anti-float so the direction mentioned will clear that side and essentially "un-wrap" the element
 */
 
-
-.top-container {
-    background-color: #E3FDFD;
-}
-
-img {
-    background-color: #E3FDFD;
-
+p {
+    line-height: 2;
 }
 
 body {
+    font-family: 'Merriweather', serif;
     margin: 0;
+    text-align: center;
+    color: #40514E;
 }
 
 h1 {
-    margin-top: 0;
+    color: #66BFBF;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625em;
+    margin: 50px auto 0 auto;
+}
+
+h2 {
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+h3 {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    margin: auto;
+    color: #11999E;
+}
+
+hr {
+    border: dotted 6px #EAF6F6;
+    border-top: none;
+    width: 4%;
+    margin: 100px auto;
+}
+
+.top-container {
+    background-color: #E3FDFD;
+    padding-top: 100px;
+    position: relative;
 }
 
 .middle-container {
-    background-color: red;
-    width: 200px;
-    height: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .bottom-container {
-    background-color: blue;
-    width: 200px;
-    height: 200px;
+    background-color: #66BFBF;
+    height: 150px;
+    padding-top: 100px;
 }
 
-.full-stack {
+.bottom-cloud {
+    bottom: 300px;
+    left: 200px;
+    position: absolute;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 250px;
+    top: 40px;
+}
+
+.web-developer {
     text-decoration: underline;
+}
+
+
+
+.skill-row {
+    margin: 100px auto;
+    text-align: left;
+    width: 50%;
+    padding: 10px 0;
+
+}
+
+.web-dev-gif {
+    float: left;
+    margin-right: 30px;
+    width: 25%;
+}
+
+.gdsc-gif {
+    float: right;
+    margin-left: 30px;
+    width: 25%;
+}
+
+.akshat-pfp {
+    width: 30%;
+}
+
+.profile {
+    width: 50%;
+    margin: 100px auto;
+}
+
+.skills {
+    margin: 100px auto;
+}
+
+.contact-me {
+    margin: 100px auto;
+}
+
+.btn {
+    margin-top: 40px;
+    border-radius: 8px;
+    background: linear-gradient(#11cdd4, #11999e);
+    height: 35px;
+    width: 140px;
+    border: none;
+}
+
+.btn:hover {
+    background: linear-gradient(#30e3cb, #2bc4ad);
+}
+
+.contact-me-btn {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.footer-link {
+    padding: 30px;
+}
+
+.footer-link:hover {
+    color: #EAF6F6;
+}
+
+.copyright {
+    padding: 30px;
+    color: #EAF6F6;
+    font-size: 0.75rem;
+}
+
+.about-me-para {
+    margin: 20px 0 20px 0;
+    display: block;
 }
