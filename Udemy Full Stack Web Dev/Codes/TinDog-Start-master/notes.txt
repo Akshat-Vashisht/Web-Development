@@ -1,0 +1,33 @@
+# BOOTSTRAP GRIDS
+
+Grids are made up of 12 parts in one row
+<div class = "row">
+    <div clas = "col">
+    <div>
+</div>
+
+By default it will take all 12 parts, we can change that using (lg/md/sm)-(number of parts we want it to take)
+
+so lg-3 means it will take 3 parts i.e 4 divs will be visible on large screen
+so md-6 means it will take 6 parts i.e 2 divs will be visible on medium screen
+so sm-12 means it will take 12 parts i.e 1 div will be visible on small screen
+
+However by default it takes the entire width, so sm-12 is not necessary
+
+This is how you can make the website responsive using BOOTSTRAP
+
+
+# BOOTSTRAP CONTAINER
+
+A container is again a layout manager in bootsrap which helps to style all the content inside with padding margings etc.
+A default container will take up some of the the width (more than half) and will jump to lower widths as width of the viewport decreases
+A fluid container however will take up all the width and will smoothly adapt to the screen size
+
+<div class = "container>
+content
+</div>
+<div class = "container-fluid>
+content
+</div>
+
+Then we can target container/container-fluid in css and apply our own padding and styles
