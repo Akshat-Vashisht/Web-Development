@@ -24,7 +24,7 @@ h2 {
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
 }
 
 p {
@@ -32,7 +32,7 @@ p {
 }
 
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 
 
@@ -65,14 +65,18 @@ p {
 }
 
 #iphone-mockup {
-    width: 60%;
+    width: 20%;
     transform: rotate(25deg);
+    position: absolute;
+    right: 25%;
 }
 
 /* FEATURES */
 
 #features {
     padding: 7% 15%;
+    background-color: white;
+    position: relative;
 }
 
 .features-block {
@@ -128,4 +132,41 @@ p {
 #pricing {
     text-align: center;
     padding: 100px;
+}
+
+
+/* Call to action */
+
+#cta {
+    background-color: #ff4c68;
+    color: white;
+    text-align: center;
+    padding: 5% 15%;
+}
+
+.cta-btn {
+    margin: 5% 2%;
+}
+
+/* Footer */
+
+#footer {
+    background-color: white;
+    text-align: center;
+    padding: 5% 15%;
+}
+
+.footer-icons {
+    margin: 10px;
+}
+
+@media (max-width:1028px) {
+    #title {
+        text-align: center;
+    }
+
+    #iphone-mockup {
+        transform: rotate(0);
+        position: static;
+    }
 }
