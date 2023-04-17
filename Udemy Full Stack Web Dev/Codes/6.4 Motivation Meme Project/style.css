@@ -1,0 +1,16 @@
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+}
+
+.my-div {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    height: 40rem;
+}
+
+.motivation-img {
+    border: white 5px solid;
+}
