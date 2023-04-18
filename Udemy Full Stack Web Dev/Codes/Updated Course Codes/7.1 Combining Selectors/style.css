@@ -1,0 +1,33 @@
+/* Write your code here: */
+
+h1,
+h2 {
+    color: blueviolet;
+}
+
+
+/* Direct child can be accessed like this */
+.box>p {
+    color: firebrick;
+}
+
+/* Child/Descendant (not necessary direct) can be accessed like this*/
+.box li {
+    color: blue;
+}
+
+/* OR 
+.box > ul > li{
+
+}
+*/
+
+
+/* Chaining: All selectors must be true (the element should have all the attributes) */
+li.done {
+    color: seagreen;
+}
+
+ul > p.done{
+    font-size: 0.5rem;
+}

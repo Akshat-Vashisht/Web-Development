@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<!-- Static: Default HTML flow -->
+<!-- Relative: Relative to the default position of the html -->
+<!-- Absolute: Relative to the top left corner or the nearest position parent-->
+<!-- Fixed: Relative to top left but fixed while scrolling -->
+<head>
+  <title>CSS Positioning Exercise</title>
+  <style>
+    .red-circle {
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      left: 250px;
+      top: 150px;
+    }
+
+    .blue-box {
+      background-color: blue;
+      height: 300px;
+      width: 500px;
+      position: relative;
+      top: 200px;
+      left: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="blue-box">
+    <div class="red-circle">
+    </div>
+  </div>
+
+</body>
+
+</html>
