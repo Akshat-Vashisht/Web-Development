@@ -34,10 +34,10 @@ app.post("/", function (req, res) {
     };
 
     const jsonData = JSON.stringify(data)
-    const url = "https://us17.api.mailchimp.com/3.0/lists/b842627af0"
+    const url = "https://us17.api.mailchimp.com/3.0/lists/"
     const options = {
         method: "POST",
-        auth: "Akshat:670cf16a65ef7771938277f9b78a481a-us17"
+        auth: "Akshat:"
     }
     const request = https.request(url, options, function (response) {
         response.on("data", function (data) {
@@ -53,9 +53,3 @@ app.listen(port, function () {
     console.log("Server started on port " + port + " successfully. ");
 });
 
-
-// API KEY
-// 670cf16a65ef7771938277f9b78a481a-us17
-
-// LIST ID
-// b842627af0
