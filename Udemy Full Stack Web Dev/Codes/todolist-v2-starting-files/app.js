@@ -8,7 +8,7 @@ const _ = require("lodash");
 main().catch((err) => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb://127.0.0.1:27017/todolistDB");
+  await mongoose.connect("mongodb+srv://akashat2003:ZP2yETg8WPqcUJzI@cluster0.bqcvmve.mongodb.net/todolistDB");
 }
 
 const app = express();
