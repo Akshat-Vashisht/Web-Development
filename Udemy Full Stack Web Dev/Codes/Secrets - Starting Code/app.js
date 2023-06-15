@@ -2,7 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const encrpyt = require("mongoose-encryption");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
 const app = express();
 const port = 3000;
@@ -24,11 +25,6 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 
-userSchema.plugin(encrpyt, {
-  secret: process.env.SECRET,
-  encryptedFields: ["password"],
-});
-
 const User = mongoose.model("User", userSchema);
 
 app.get("/", (req, res) => {
@@ -44,30 +40,40 @@ app.get("/register", (req, res) => {
 });
 
 app.post("/register", (req, res) => {
-  const user = new User({
-    username: req.body.username,
-    password: req.body.password,
-  });
-  user
-    .save()
-    .then(() => {
-      res.render("secrets");
-    })
-    .catch((err) => {
+  bcrypt.hash(req.body.password, saltRounds, (err, hash) => {
+    if (!err) {
+      const user = new User({
+        username: req.body.username,
+        password: hash,
+      });
+      user
+        .save()
+        .then(() => {
+          res.render("secrets");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    } else {
       console.log(err);
-    });
+    }
+  });
 });
 
 app.post("/login", (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-  User.findOne({ username: username }).then((result) => {
-    if (result === null) {
+  User.findOne({ username: username }).then((docs) => {
+    if (docs === null) {
       console.log("No registered user with that email");
     } else {
-      if (result.password === password) {
-        res.render("secrets");
-      }
+      bcrypt.compare(password, docs.password, (err, result) => {
+        if (!err) {
+          if (result === true) {
+            res.render("secrets");
+          }
+        }
+      });
     }
   });
 });
